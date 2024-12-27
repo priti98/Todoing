@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='signup.css')}}"> -->
+    <link rel="stylesheet" href="../static/signup.css">
+    <title>ToDoing</title>
+</head>
+
+<body>
+
+
+    <h1 class="heading">ToDoing</h1>
+
+
+    <div class="center">
+        <form action="{{url_for('signup')}}" method="post" class="signupform">
+            <div class="signup">
+                <input type="text" name="name" placeholder="Username" class="input">
+                <input type="email" name="email" placeholder="Email" class="input">
+                <input type="password" name="password" placeholder="Password" class="input">
+
+                {% for mesg in get_flashed_messages(category_filter=['exists']) %}
+                <p class="error">{{ mesg }} </p>
+                {% endfor %}
+
+                {% for mesg in get_flashed_messages(category_filter=['no_details']) %}
+                <p class="error">{{ mesg }} </p>
+                {% endfor %} 
+
+                <button type="submit" class="signup-button">Sign Up</button>
+            </div>
+            <p class="existing">Already have an account? <a href="/login" class="login-link">Log In</a> </p>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+body {
+    
+    /* background-image: linear-gradient(120deg, #e2c35d, #d88771); */
+    background-image: linear-gradient(120deg, #7e5de2, #dbb809);;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+form{
+    border: 3px solid rebeccapurple;
+    border-radius: 20px;
+    background-color: #c9acc9;
+    padding: 20px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.input {
+    margin: 18px;
+    border: 2px solid rebeccapurple;/*coral;*/
+    padding: 10px;
+    /* border-radius: 10px; */
+    width: 16em;
+
+}
+
+.login-button{
+    padding: 6px;
+    margin: 0px 10px;
+    border-radius: 7px;
+    border: 3px solid rebeccapurple;
+    color: black;
+    font-size: 1rem;
+    background-color: yellow;
+}
+
+.login-button:hover{
+    background-color: coral;
+}
+.message{
+    color: red;
+    text-align: center;
+}
+
+.account_created_message{
+    color: green;
+    text-align: center;
+}
+
+.cross-button{
+    background-color: #dbb809;
+}
+
+.new-user {
+    text-align: center;
+    margin: 6px 48px;
+    color: rebeccapurple;
+}
+
+
+.signup-link {
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+</head>
+
+<body>
+
+    <div class="center">
+
+        {% for mesg in get_flashed_messages(category_filter=['account created']) %}
+        <p class="account_created_message">{{ mesg }} <button class="cross-button"
+                onclick="remove_message()">&#10060;</button></p>
+        {% endfor %}
+
+        <form action="/checkLogin" method="post">
+            <div class="login-form">
+                <input class="input" type="text" name="username" placeholder="Username">
+                <input class="input" type="password" placeholder="Password" name="password">
+
+                <!-- message for incorrect credentials -->
+                {% for mesg in get_flashed_messages(category_filter=['wrong_credentials']) %}
+                <p class="message">{{ mesg }}</p>
+                {% endfor %}
+
+                {% for mesg in get_flashed_messages(category_filter=['no_credentials']) %}
+                <p class="message">{{ mesg }}</p>
+                {% endfor %}
+
+                <button class="login-button" type="submit">Login</button>
+            </div>
+            <p class="new-user">New user? <a href="/" class="signup-link">Sign up</a> </p>
+
+        </form>
+    </div>
+</body>
+
+<script>
+
+    function remove_message() {
+
+        const ele = document.getElementsByClassName("account_created_message");
+        ele[0].remove();
+    }
+</script>
+
+</html>
