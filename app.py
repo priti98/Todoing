@@ -4,7 +4,7 @@ from sqlalchemy.orm import DeclarativeBase
 from datetime import datetime
 from sqlalchemy import  DateTime
 from sqlalchemy.sql import func
-
+from mysql import connector
 
 #creating the app
 app=Flask(__name__)
@@ -156,4 +156,4 @@ def logout():
     return redirect(url_for('login'))
 
 
-app.run()
+app.run(port=4000, host='0.0.0.0')
