@@ -156,4 +156,5 @@ def logout():
     return redirect(url_for('login'))
 
 
-app.run(port=4000, host='0.0.0.0')
+app.run()
+
