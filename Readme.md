@@ -23,5 +23,5 @@ Click the link above to see the application in action!
 - **Database:** MySQL
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
 
